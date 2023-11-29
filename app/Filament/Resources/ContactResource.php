@@ -63,4 +63,11 @@ class ContactResource extends Resource
             'edit' => Pages\EditContact::route('/{record}/edit'),
         ];
     }
+
+    public static function getWidgets(): array
+    {
+        return [
+            ContactResource\Widgets\CreateContactWidget::class,
+        ];
+    }
 }
